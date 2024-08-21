@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Details</title>
+    
+</head>
+<body>
+    <h1>Flight Details</h1>
+    <p>Flight Number: ${flight.flightNumber}</p>
+    <p>Destination: ${flight.destination}</p>
+    <p>Origin: ${flight.destination}</p>
+    <a href="./">Back to List</a>
+</body>
+</html>

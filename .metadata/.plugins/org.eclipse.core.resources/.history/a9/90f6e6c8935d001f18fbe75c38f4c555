@@ -1,0 +1,13 @@
+package springmvc.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+public class FlightService {
+	
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+	
+	
+
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id= "wish" class = "com.coforge.beans.Wisher" scope = "prototype">
+
+<property name = "message" value="Good Morning Spring Java"/>
+
+</bean>
+
+<bean id = "add1" class = "com.coforge.beans.Address">
+
+<property name = "hno" value = "45"/>
+<property name = "street" value = "mg road"/>
+
+</bean>
+
+<bean id = "per" class = "com.coforge.beans.Pearson">
+
+<property name = "age" value = "32"/>
+<property name = "name" value = "bhavan"/>
+<property name = "add" ref = "add1"/>
+
+</bean>
+</beans>

@@ -1,0 +1,22 @@
+package springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/flight")
+public class FlightController {
+
+	
+	@RequestMapping("/home")
+	public String home() {
+		
+		return "index";
+	}
+	
+	@RequestMapping("/add")
+	public String add() {
+		
+		return "add";
+	}
+}

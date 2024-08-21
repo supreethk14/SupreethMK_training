@@ -1,0 +1,46 @@
+package springmvc.entity;
+
+public class Flight {
+
+	private int flightId;
+	
+	private String flidhtNumber;
+	
+	private String destination;
+	
+	private String departure;
+
+	public int getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(int flightId) {
+		this.flightId = flightId;
+	}
+
+	public String getFlidhtNumber() {
+		return flidhtNumber;
+	}
+
+	public void setFlidhtNumber(String flidhtNumber) {
+		this.flidhtNumber = flidhtNumber;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public String getDeparture() {
+		return departure;
+	}
+
+	public void setDeparture(String departure) {
+		this.departure = departure;
+	}
+	
+	
+}

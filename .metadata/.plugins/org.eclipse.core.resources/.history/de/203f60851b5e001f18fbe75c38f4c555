@@ -1,0 +1,51 @@
+package springmvc.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Flight {
+
+	@Id
+	private int flightId;
+	
+	private String flightNumber;
+	
+	private String destination;
+	
+	private String departure;
+
+	public int getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(int flightId) {
+		this.flightId = flightId;
+	}
+
+	public String getFlidhtNumber() {
+		return flightNumber;
+	}
+
+	public void setFlidhtNumber(String flidhtNumber) {
+		this.flightNumber = flidhtNumber;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public String getDeparture() {
+		return departure;
+	}
+
+	public void setDeparture(String departure) {
+		this.departure = departure;
+	}
+	
+	
+}

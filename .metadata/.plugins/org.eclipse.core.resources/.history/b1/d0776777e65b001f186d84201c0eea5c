@@ -1,0 +1,17 @@
+package com.coforge;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static  void main( String[] args )
+    {
+    	
+    	ClassPathXmlApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+        System.out.println( "Hello World!" );
+    }
+}

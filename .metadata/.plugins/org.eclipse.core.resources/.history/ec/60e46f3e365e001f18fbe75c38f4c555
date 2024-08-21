@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Flight</title>
+    
+</head>
+<body>
+    <h1>Edit Flight</h1>
+    <form action="edit/${flight.id}" method="post">
+        <label for="flightNumber">Flight Number:</label>
+        <input type="text" id="flightNumber" name="flightNumber" value="${flight.flightNumber}" required><br>
+        
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" value="${flight.destination}" required><br>
+        
+        <label for="origin">Origin:</label>
+        <input type="text" id="origin" name="origin" value="${flight.origin}" required><br>
+        
+        <input type="submit" value="Save Changes">
+    </form>
+    <a href="./">Back to List</a>
+</body>
+</html>

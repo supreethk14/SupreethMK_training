@@ -1,0 +1,51 @@
+package springmvc.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import springmvc.entity.Flight;
+
+
+@Transactional
+public class FlightService {
+	
+	
+	private HibernateTemplate hibernateTemplate;
+	
+	
+	
+	public HibernateTemplate getHibernateTemplate() {
+		return hibernateTemplate;
+	}
+
+
+
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+
+
+
+	
+	public int insert(Flight flight) {
+		return (int) hibernateTemplate.save(flight);
+	}
+
+
+
+	public List<Flight> getAllFlights() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	public Flight getFlightById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

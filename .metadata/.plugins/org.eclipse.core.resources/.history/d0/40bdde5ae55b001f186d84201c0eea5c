@@ -1,0 +1,15 @@
+package com.coforge;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static  void main( String[] args )
+    {
+    	
+    	ClassPathXmlApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+        System.out.println( "Hello World!" );
+    }
+}

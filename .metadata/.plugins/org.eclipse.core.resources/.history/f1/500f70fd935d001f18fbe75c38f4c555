@@ -1,0 +1,38 @@
+package springmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import springmvc.entity.Flight;
+import springmvc.service.FlightService;
+
+@Controller
+@RequestMapping("/flights")
+public class FlightController {
+
+	@Autowired
+	private FlightService flightService;
+	
+    @GetMapping
+	public String home() {
+		
+		return "index";
+	}
+	
+    @GetMapping("/add")
+	public String showAddForm(Model model) {
+//		model.addAttribute(null, model);
+		return "addFlight";
+	}
+    
+    @PostMapping("/add")
+  	public String addFlight(@ModelAttribute Flight flight, Model model) {
+//  		model.addAttribute(null, model);
+  		return "redirect:/flights";
+  	}
+}

@@ -1,0 +1,14 @@
+package springmvc.aop;
+
+public class AspectClass {
+	
+	
+	public void BeginTxn()
+	{
+		System.out.println("Transaction Started");
+	}
+	
+	
+
+}
+

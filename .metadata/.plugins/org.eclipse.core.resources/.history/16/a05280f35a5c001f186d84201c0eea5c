@@ -1,0 +1,40 @@
+package com.coforge;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.coforge.beans.Pearson;
+import com.coforge.beans.Wisher;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static  void main( String[] args )
+    {
+    	
+    	ClassPathXmlApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+    	
+    	Wisher w = container.getBean("wish", Wisher.class);
+    	
+    	
+        System.out.println( w.getMessage() );
+        
+	Wisher w2 = container.getBean("wish", Wisher.class);
+	
+	w2.setMessage("bye");
+    	
+	 System.out.println( w.getMessage() );
+        System.out.println( w2.getMessage() );
+        
+//    	Pearson p = container.getBean("per", Pearson.class);
+//    	
+//    	System.out.println(p.getName());
+//    	System.out.println(p.getAge());
+//    	System.out.println(p.getAdd().getHno());
+//    	System.out.println(p.getAdd().getStreet());
+        
+        container.close();
+    }
+}

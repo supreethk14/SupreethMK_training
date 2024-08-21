@@ -1,0 +1,25 @@
+package com.coforge;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.coforge.beans.Wisher;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static  void main( String[] args )
+    {
+    	
+    	ClassPathXmlApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+    	
+    	Wisher w = container.getBean("wisher", Wisher.class);
+    	
+    	
+        System.out.println( w.getMessage() );
+        
+        container.close();
+    }
+}

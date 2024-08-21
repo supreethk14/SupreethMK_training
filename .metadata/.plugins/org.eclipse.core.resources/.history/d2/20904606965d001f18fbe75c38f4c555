@@ -1,0 +1,23 @@
+package springmvc.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Service;
+
+import springmvc.entity.Flight;
+
+@Service
+@Transactional
+public class FlightService {
+	
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+	
+	
+	public int insert(Flight flight) {
+		return (int) hibernateTemplate.save(flight);
+	}
+
+}
